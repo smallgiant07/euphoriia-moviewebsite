@@ -1,0 +1,73 @@
+@media screen and (max-width: 1604px) {
+    
+.nav-container{
+        display: block;
+}
+
+.logo-container{
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+
+.tablecontainer{
+    padding-left: 10%;
+    width: 43%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+}
+
+nav ul li a {
+    display: inline-block;
+    font-size: 2em;
+}
+
+
+ul li {
+    display: inline-block;
+    padding: 1em;
+}
+    
+.Motto {
+        font-size: 1.5em;
+}
+    
+#requirement2, #product {
+    font-size: 2em;
+}
+
+    #product2 {
+        font-size: 1.5em;
+    }    
+    
+.gallery:hover figure img{
+    opacity: 0.3;
+}
+
+.linkcontainer:hover .linkenquiry {
+    opacity: 1.0;
+}
+
+.linkenquiry{
+    top: 80%;
+}
+
+.linktext a:link, .linktext a:visited{
+    font-size: 1em;                                    /* and https://www.w3schools.com/css/tryit.asp?filename=trycss_image_gallery_responsive */
+    padding: 7.5px;
+    
+}
+.side-content{                                        
+    width: 65%;
+    height: 45%;
+    padding: 10px;
+    top: -20%;
+    margin: auto;
+    font-size: 1em;
+}
+    aside {
+        max-height: 150px;
+    }
+}

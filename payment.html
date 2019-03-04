@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Booking movie tickets online melbourne" />
+    <meta name="keywords" content="movie tickets online, village cinema booking, hoyts booking, all-in-one site for booking tickets online, euphoriia movie booking" />
+    <meta name="author" content="Prasann Doshi"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles/style.css" type="text/css" />
+    <link rel="stylesheet" href="styles/responsive.css" type="text/css" media="screen and (max-width: 1604px)" />
+    <link rel="stylesheet" href="styles/mobile.css" type="text/css" media="screen and (max-width: 1030px)" />
+    <script src="scripts/part2.js"></script>
+    <script src="scripts/enhancements.js"></script>
+    <title>Payment Page</title>
+</head>
+    
+<body>
+    <div class="wrapper">
+    <header>    
+        <div class="hamnav">
+            <input type="checkbox" id="hamshow"/>        
+            <label for="hamshow"><img src="styles/images/euphoriia2.png" alt="euphoriialogo.png"/></label>
+            <ul class="hammenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Movies</a></li>
+                <li><a href="enquire.html">Book now!</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="enhancements.html">Enhancements</a></li>
+                <li><a href="enhancements2.html">Enhancements 2</a></li>
+            </ul>
+        </div>
+        <nav class="nav-container resposivenav">
+            <div class="logo-container" ><img src="styles/images/euphoriia2.png" alt="euphoriialogo.png" height= "180" width= "270"/></div>
+            <div class="tablecontainer">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Movies</a></li>
+                <li><a href="enquire.html">Book now!</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="enhancements.html">Enhancements</a></li>
+                <li><a href="enhancements2.html">Enhancements 2</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <form class="relativecontainer" id="payform" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php" novalidate="novalidate">
+        <fieldset>
+             <legend>Booking Information</legend>
+                <fieldset>
+                    <legend>Your details:</legend>
+                        <p>Your Firstname: <span id="confirm_firstname"></span></p>
+                        <p>Your Lastname: <span id="confirm_lastname"></span></p>
+                        <p>Your Email: <span id="confirm_email"></span></p>
+                        <p>Your Phone-number: <span id="confirm_phonenumber"></span></p>
+                        <p>Your Address: 
+                            <span id="confirm_street"></span><span>, </span>
+                            <span id="confirm_suburb"></span><span>, </span>
+                            <span id="confirm_state"></span><span> </span>
+                            <span id="confirm_postcode"></span>
+                        </p>
+                        <p>Your Preferred contact: <span id="confirm_preferred_contact"></span></p>
+                        <p>Your suggestions: <span id="confirm_descript"></span></p>
+                        <input type="hidden" name="firstname" id="firstname" />
+                        <input type="hidden" name="lastname" id="lastname"/>
+                        <input type="hidden" name="email" id="email" />
+                        <input type="hidden" name="phonenumber" id="phonenumber" />
+                        <input type="hidden" name="street" id="street" />
+                        <input type="hidden" name="suburb" id="suburb" />
+                        <input type="hidden" name="state" id="state" />
+                        <input type="hidden" name="postcode" id="postcode" />
+                        <input type="hidden" name="preferred_contact" id="preferred_contact" />
+                        <input type="hidden" name="descript" id="descript" />
+                </fieldset>
+                <fieldset>
+                    <legend>Ticket Information:</legend>
+                        <p>Movie: <span id="confirm_moviename"></span></p>
+                        <p>Ticket type: <span id="confirm_ticktype"></span></p>
+                        <p>Number of Tickets: <span id="confirm_quantity"></span></p>
+                        <p>Price: $<span id="confirm_price"></span></p>
+                        <p>Extras: <span id="confirm_extras"> ,</span></p>
+                        <input type="hidden" name="moviename" id="moviename" />
+                        <input type="hidden" name="ticktype" id="ticktype" />
+                        <input type="hidden" name="quantity" id="quantity" />
+                        <input type="hidden" name="price" id="price" />
+                        <input type="hidden" name="extras" id="extras" />
+                </fieldset>
+                <fieldset>
+                    <legend>Payment options:</legend>
+                        <p>
+                            <label for="credtype">Credit card type:</label>
+                            <select name="credtype" id="credtype" required="required">
+                                <option value="">Please select</option>
+                                <option value="Visa">Visa</option>
+                                <option value="Mastercard">Mastercard</option>
+                                <option value="American Express">American Express</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="fullname">Name on card:</label>
+                            <input type="text" name="fullname" id="fullname" required="required" />
+                        </p>
+                        <p>
+                            <label for="cardno">Credit card number:</label>
+                            <input type="text" name="cardno" id="cardno" required="required" />
+                        </p>
+                        <p>
+                            <label for="expdate">Credit card expiry date:</label>
+                            <input type="text" name="expdate" id="expdate" placeholder="mm-yy" required="required" />
+                        </p>
+                        <p>
+                            <label for="cvv">Card verification value:</label>
+                            <input type="text" name="cvv" id="cvv" placeholder="cvv" required="required" />
+                        </p>
+                </fieldset>
+        </fieldset>
+        <p>
+            <input type="submit" value="Check Out" />&#xA0;<button type="button" id="cancelButton">Cancel</button>
+        </p>
+    </form>
+    <div class="push"></div>
+</div>
+<footer>Created by Prasann Doshi.</footer>
+</body>
+</html>

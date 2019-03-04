@@ -1,0 +1,125 @@
+@media screen and (max-width: 1030px)
+{
+    
+    .nav-container{
+            display: none;
+    }
+    
+    .hamnav {
+        top:0;                                                          /* RESPONSIVE HAM NAVIGATION BAR */
+        left: 0;
+        visibility: visible;
+        position: fixed;
+        display: block;
+        box-shadow: 0 0 1px 0 rgba(0,0,0,0.9);
+        background-color: rgba(255,255,255,0.955);
+        width: 100%;
+        height: auto;
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+        z-index: 2000;
+    }
+    
+    .hamnav input[type=checkbox] {
+        display: none;
+    }
+    
+    .hammenu {
+        display: block;
+        text-align: center;
+        overflow: hidden;                                  /* https://jsfiddle.net/4y50uarb/ */
+        max-height: 0;
+        transition: 1s;
+        margin: 0;
+    }
+    
+    .hammenu li a{
+        color: #616161;                                 /* referred here https://www.sitepoint.com/responsive-fluid-width-variable-item-navigation-css/ */
+        font-size: 1.6em;
+        font-family: "SIMPLIFICA";
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+    }
+    
+    .hammenu li {
+        display: block;
+       
+    }
+    
+    .hamnav img {
+        display: block;
+        height: auto;
+        width: 270px;
+        position: relative;
+        margin: auto;
+        cursor: pointer;
+    }
+    
+    .hamnav input[type=checkbox]:checked ~ .hammenu {
+        max-height: 500px;
+        display: block;
+    }
+
+    
+
+/* RESPOSIVE */
+    
+    .Motto {
+        display: none;
+    }
+    
+    #index, #product2 {
+        font-size: 1em;
+    }
+    #requirement2, #product{
+        font-size: 1.5em;
+    }
+    
+    footer{
+        height: auto;
+    }
+    
+    .resgallery figure {
+        width: 100%;
+    }
+    
+    .gallery figure img {
+        width: 100%;
+        height: auto;
+        box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.8);
+        opacity: 1;
+        z-index: 133;
+        backface-visibility: hidden;
+}
+    
+    aside{
+        display: none;
+    }
+    
+    .gallery:hover figure img{
+    opacity: 0.3;
+}
+
+.linkcontainer:hover .linkenquiry {
+    opacity: 1.0;
+}
+
+.linkenquiry{
+    top: 80%;
+}
+
+.linktext a:link, .linktext a:visited{
+    font-size: 1em;                                    /* and https://www.w3schools.com/css/tryit.asp?filename=trycss_image_gallery_responsive */
+    padding: 5px;
+    
+}
+.side-content{                                        
+    margin: auto;
+    width: 65%;
+    height: 40%;
+    overflow: auto;
+}
+   
+}

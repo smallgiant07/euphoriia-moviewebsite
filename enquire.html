@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Booking movie tickets online melbourne" />
+    <meta name="keywords" content="movie tickets online, village cinema booking, hoyts booking, all-in-one site for booking tickets online, euphoriia movie booking" />
+    <meta name="author" content="Prasann Doshi"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles/style.css" type="text/css" />
+    <link rel="stylesheet" href="styles/responsive.css" type="text/css" media="screen and (max-width: 1604px)" />
+    <link rel="stylesheet" href="styles/mobile.css" type="text/css" media="screen and (max-width: 1030px)" />
+    <script src="scripts/part2.js"></script>
+    <script src="scripts/enhancements.js"></script>
+    <title>Booking..</title>
+</head>
+    
+<body>
+    <div class="wrapper">
+    <header>    
+        <div class="hamnav">
+            <input type="checkbox" id="hamshow"/>        
+            <label for="hamshow"><img src="styles/images/euphoriia2.png" alt="euphoriialogo.png"/></label>
+            <ul class="hammenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Movies</a></li>
+                <li><a href="enquire.html">Book now!</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="enhancements.html">Enhancements</a></li>
+                <li><a href="enhancements2.html">Enhancements 2</a></li>
+            </ul>
+        </div>
+        <nav class="nav-container resposivenav">
+            <div class="logo-container" ><img src="styles/images/euphoriia2.png" alt="euphoriialogo.png" height= "180" width= "270"/></div>
+            <div class="tablecontainer">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Movies</a></li>
+                <li><a href="enquire.html">Book now!</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="enhancements.html">Enhancements</a></li>
+                <li><a href="enhancements2.html">Enhancements 2</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <form class="relativecontainer" id="regform" action="payment.html" novalidate="novalidate">
+        <fieldset>
+             <legend>Booking Information</legend>
+                <fieldset>
+                    <legend>Contact Informtion:</legend>
+                        <p>
+                            <label for="firstname">First name:</label>
+                            <input type="text" name="firstname" id="firstname" pattern="[a-zA-Z]{2,}" maxlength="25" required="required" />
+                            &#xA0;&#xA0;
+                            <label for="lastname">Last name</label>
+                            <input type="text" name="lastname" id="lastname" pattern="[a-zA-Z]{2,}" maxlength="25" required="required" />
+                        </p>
+                        <p>
+                            <label for="emailad">Email:</label>
+                            <input type="email" name="emailad" id="emailad" required="required" />
+                            &#xA0;&#xA0;
+                            <label for="phonenumber">Phone number:</label>
+                            <input type="tel" name="phonenumber" id="phonenumber" pattern="\d{10}" required="required" placeholder="xxxxxxxxxx" />
+                        </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Address: </legend>
+                    <p>
+                        <label for="street">Street:</label>
+                        <input type="text" name="street" id="street" pattern="[a-zA-Z]{2,}" maxlength="40" required="required" />
+                        &#xA0;&#xA0;
+                        <label for="suburb">Suburb:</label>
+                        <input type="text" name="suburb" id="suburb" pattern="[a-zA-Z]{2,}" maxlength="20" required="required" />
+                    </p>
+                    <p>
+                        <label for="state">State:</label>
+                        <select name="state" id="state" required="required">
+                            <option value="">Please select</option>
+                            <option value="VIC">VIC</option>
+                            <option value="NSW">NSW</option>
+                            <option value="QLD">QLD</option>
+                            <option value="NT">NT</option>
+                            <option value="WA">WA</option>
+                            <option value="SA">SA</option>
+                            <option value="TAS">TAS</option>
+                            <option value="ACT">ACT</option>
+                        </select>
+                        &#xA0;&#xA0;
+                        <label for="postcode">Postcode:</label>
+                        <input type="text" name="postcode" id="postcode" pattern="\d{4}" placeholder="xxxx" required="required" />
+                    </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Preferred Contact:</legend>
+                        <p id="prefcontact">
+                            <label for="email">Email</label>
+                            <input type="radio" name="preferred_contact" value="Email" id="email" required="required" checked="checked" /><span>&#xA0;&#xA0;</span>
+                            <label for="post">Post</label>
+                            <input type="radio" name="preferred_contact" value="Post" id="post"/><span>&#xA0;&#xA0;</span>
+                            <label for="phone">Phone</label>
+                            <input type="radio" name="preferred_contact" value="Phone" id="phone"/><span>&#xA0;&#xA0;</span>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Ticket Information:</legend>
+                        <p>
+                            <label for="moviename">Movie:</label>
+                            <select name="moviename" id="moviename" required="required">
+                            <option value="">Please select</option>
+                            <option value="Ghost in the Shell">Ghost in the shell</option>
+                            <option value="Smurfs 2">Smurfs 2</option>
+                            <option value="Fate of the Furious">Fate of the Furious</option>
+                            <option value="Guardians of Galaxy Vol.2">Guardians of the Galaxy Vol.2</option>
+                            </select>
+                            &#xA0;&#xA0;
+                            <label for="3d">3D</label>
+                            <input type="checkbox" name="extras[]" value="3D" id="3d" checked="checked"/>
+                            <label for="popcorn">Popcorn</label>
+                            <input type="checkbox" name="extras[]" value="Popcorn" id="popcorn"/>
+                            <label for="softdrinks">Softdrinks</label>
+                            <input type="checkbox" name="extras[]" value="Softdrinks" id="softdrinks"/>
+                        </p>
+                        <p>
+                            <label for="ticktype">Type of ticket:</label>
+                            <select name="ticktype" id="ticktype" required="required">
+                                <option value="">Please select</option>
+                                <option value="Regular">Regular</option>
+                                <option value="Lounge">Lounge</option>
+                                <option value="Luxury">Luxury</option>
+                                <option value="Private">Private</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="quantity">Number of tickets:</label>
+                            <input type="text" name="quantity" id="quantity" maxlength="2" required="required" />
+                        </p>
+                        <div id="PricingDemo">
+                            <p id="pricing2"></p>
+                            <p id="pricing"></p>
+                            <input type="hidden" name="price" id="price" />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Comments:</legend>
+                        <p>
+                            <label for="descript">Special requests/ Suggestions / Recommendations :</label><br />
+                            <textarea id="descript" name="commentsection" placeholder="Type here..." rows="5" cols="50"></textarea>
+                        </p>
+                    </fieldset>
+            </fieldset>
+            <br />
+            <p>
+                 <input type="submit" value="Pay Now" />&#xA0;<input type="reset" value="Reset form" />
+            </p>
+    </form>
+    <div class="push"></div>
+</div>
+<footer>Created by Prasann Doshi.</footer>
+</body>
+</html>

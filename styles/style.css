@@ -1,0 +1,549 @@
+/* GENERAL CSS */
+
+body {                                               /* requirement */
+    padding: 4px;
+    overflow-x: hidden;
+    background: url(images/background.jpg);          /* http://wallpapersafari.com/w/QgUPzL/ */
+    background-size: cover;                          /* To cover the whole page */
+    background-origin: border-box;     
+                                                    /*Body of the page unique across all pages*/
+}
+
+.container {
+    display: block;
+    margin-top: 250px;                              /* Set the content so it doesnt collide with navigation bar */
+    text-align: center;
+
+}
+
+.wrapper {
+    min-height: 400px;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -30px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    margin-top: 0.1%;
+    background-color: rgba(0,0,0,0.6);
+    color: rgba(255,255,255,0.9);                   /* requirement */
+    padding: 1%;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.push {
+    height: 30px;
+}
+
+.productcontainer {
+        margin-top: 250px;
+        display: block;
+}
+
+
+.hamnav {
+    display: none;
+}
+
+.nav-container{                                     /* To make the navigation bar touch the left and top side of the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;                                   /* Height auto sets the height of the nav bar so that it doesnt overflow or get disrupted by rezising screen*/
+    box-shadow: 0 1px 0 0 rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.97);
+    display: table;                          
+    position: fixed;                                /*To make it slide along with scroll bar */
+    padding: 0;
+    z-index: 1000;                                  /* To make sure it doesn't get covered by any other elements which can be found later */
+    overflow: hidden;                               
+}
+
+.logo-container{
+    display: table-cell;                          /*making it inline block adds to fluidity since the element will just flow downwards on resizing screen*/
+    padding: 10px 0 0 35px;
+}
+
+
+.tablecontainer{
+    display: table-cell;
+}
+
+nav ul li a {
+    display: table-cell;
+    text-decoration: none;
+    color: #616161;                                 /* referred here https://www.sitepoint.com/responsive-fluid-width-variable-item-navigation-css/ */
+    font-size: 45px;
+    font-family: "SIMPLIFICA";
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+ul li a:hover{
+    color: black;
+}
+
+ul {
+    display: table-row;
+    list-style-type: none;
+}
+
+ul li {
+    display: inline-block;                          /* although we could have used contextual selector we are mentioning this again because we want all our lists to be like this not just nav one */
+    padding: 2em 2em 3em 2em;
+}
+
+@font-face {
+    font-family: "SIMPLIFICA";                      
+    src: url("../fonts/SIMPLIFICA.ttf");
+}
+
+/* NAV AND GENERAL ENDS HERE */
+
+/*INDEX PAGE*/
+.Motto {
+    margin: auto;
+    display: table;
+    font-family: "AlegreyaSansSC-Medium";
+    font-size: 2em;
+    color: rgba(0,0,0,0.50);
+    margin-left: 100px;
+    margin-right: 100px;
+    line-height: 2em;
+    word-spacing: 0.2em;
+    text-align: center;
+}
+
+@font-face {
+    font-family: "AlegreyaSansSC-Medium";
+    src: url("../fonts/AlegreyaSansSC-Medium.ttf");
+}
+
+
+h1,h2{ 
+    font-family: "AlegreyaSansSC";
+    font-size: 3em;
+    color: #616161;
+    word-spacing: 0.1em;
+    text-align: center;
+}
+
+#index{ 
+    font-size: 2em;
+    margin-top: 75px;
+}
+
+@font-face {
+    font-family: "AlegreyaSansSC";
+    src: url("../fonts/AlegreyaSansSC.ttf");
+}
+
+@keyframes slideimages {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }                        /*  Reference: Slider: http://codepen.io/dudleystorey/pen/kFoGw */
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+}
+.comingsoondisplay{
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;                  
+}
+
+figure { 
+    margin: 0;
+}
+div#coming-soon { 
+    width: 100%; 
+    overflow: hidden; 
+}
+
+figure.comingsoon-sliderimages {
+    position: relative; width: 500%;                           /* setting position to relative and margins to make images out of display of the screen */
+    font-size: 0;
+    animation: 30s slideimages infinite;
+    animation-delay: 2s;
+    animation-direction: alternate;
+}
+
+figure.comingsoon-sliderimages figure { 
+    width: 20%; height: auto;                                   /*height to make it fuild*/
+    display: inline-block; 
+    position: inherit;
+}
+
+figure.comingsoon-sliderimages img { width: 60%; height: 45%; }
+
+
+/* PRODUCT PAGE */
+
+
+#product {
+    font: bold small-caps 4em "AlegreyaSansSC";
+    text-align: center;
+}
+
+#product2 {
+    text-align: left;
+}
+
+.gallery {
+    display: block;
+}
+
+.side-content{
+    opacity: 0;
+    visibility: visible;
+    position: absolute;
+    background-color: rgba(255,255,255,0.97);
+    color: #616161;
+    font-family: "AlegreyaSansSC-Medium";
+    box-shadow:  0 1px 2px 1px rgba(0,0,0,0.95);
+    text-align: center;                                         /* https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_image */
+    max-width: 720px;
+    overflow-y: auto;
+    overflow-x: hidden;                                         
+    width: 100%;
+    z-index: 999;
+    padding: 30px 30px 10px 30px;;
+    box-sizing:content-box;
+    word-spacing: 0.2em;
+    transform: translate(-50%,50%);
+    top: 50%;
+    left:50%;
+    margin: auto;
+}
+
+.gallery:hover .side-content {
+    display: inline-block;
+    transition: 0.6s ease;
+    opacity: 1;
+}
+                                                            /* The following code was referenced from https://www.w3schools.com/css/tryit.asp?filename=trycss_css_image_overlay_opacity */
+section~ul li {
+    padding: 10px;
+    display: table-cell;
+    
+}
+
+.linkcontainer{
+    position: relative;
+    width: 50%;
+}
+
+.gallery figure img {
+    width: 100%;
+    height: auto;
+    box-shadow: 1px 2px 2px 0 rgba(0,0,0,0.8);
+    opacity: 1;
+    transition: 0.5s ease;
+    z-index: 133;
+    backface-visibility: hidden;
+}
+
+.linkenquiry{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.gallery:hover figure img{
+    opacity: 0.3;
+}
+
+.linkcontainer:hover .linkenquiry {
+    opacity: 1.0;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease;
+}
+
+.linktext a:link, .linktext a:visited{
+    background-color: rgba(0,0,0,1.0);
+    color: rgba(255,255,255,0.90);
+    font-size: 2em;
+    z-index: 130;
+    border-radius: 5px;                                     /* and https://www.w3schools.com/css/tryit.asp?filename=trycss_image_gallery_responsive */
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    
+}
+
+.resgallery figure {
+    float: left;
+    width: 34%;
+    padding: 1.5%;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+aside {
+    float: right;
+    text-align: center;
+    width: 25%;
+    border: 1px solid black;
+    clear: both;
+    top: 70%;
+    left: 74.5%;
+    position: absolute;
+    background: rgba(255,255,255,0.5);
+    box-sizing: border-box;
+    padding: 45px;
+    margin: 2px;
+    max-height: 420px;
+    max-width: 25%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.tablecontainerp {
+    display: block;
+    margin: auto;
+    
+}
+
+table{
+    border-collapse: collapse;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.6);
+    border-color: rgba(0,0,0,0.65);                                 /* requirement */
+    font-family: "AlegreyaSansSC-Medium";
+    table-layout: fixed;
+    margin: auto;    
+}
+
+caption{
+    font-size: 3em;
+    opacity: 0.8;
+}
+
+caption::first-letter{
+    color: red;
+}
+
+thead {
+    background-color: rgba(0,0,0,0.9);
+    color: rgba(255,255,255,0.9);
+    font-size: 2em;                                                         /* requirement */
+    text-align: center;
+    padding: 150px;
+}
+
+tbody {
+    text-align: center;
+    background-color: rgba(255,255,255,0.6);                                /* requirement */
+    font-size: 1.2em;
+}
+
+th, td {
+    padding: 10px;
+}
+
+/* FORM */
+
+form fieldset {
+    border: 1px solid rgba(0,0,0,0.5);
+    border-style: dashed;
+    border-radius: 10px;
+}
+
+form * {
+    font-size: 1.1em;
+}
+
+/* ABOUT PAGE */
+
+.relativecontainer {
+    margin-top: 250px;
+    position: relative;
+}
+
+
+
+.deslist {
+    display: inline-block;
+    height: auto;
+    width: 280px;
+    background-color: rgba(255,255,255,0.95);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.8);
+    margin: 1%;
+}
+
+dl dt {
+    float: left;
+    width: 50%;
+    text-align: right;
+    font-weight: bold;                      /* requirement */
+    color: rgba(0,0,0,0.8);
+    padding: 1%;
+    position: relative;
+    clear: both;
+}
+
+dt::after {
+    content: " :";
+}
+
+dd {
+    padding: 1%;                            /* requirement */
+    text-align: left;
+}
+
+#myimage {
+    float: right;
+    margin: 1%;
+    text-align: center;
+    background-color: rgba(255,255,255,0.8);            /* requirement */
+    box-shadow: 0 0 1px 0 rgba(0,0,0,0.8);
+    clear: both;
+}
+
+#myimage img {
+    width: 222.894px;
+    height: 300px;                                          /* requirement */
+    border: 5px double black;
+}
+
+#myimage a {
+    text-decoration: none;
+    color: slategrey;
+    font-size: 2em;                                             /* requirement */
+}
+
+.timetble {
+    border-collapse: collapse;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.6);
+    border: none;
+    font-family: "AlegreyaSansSC-Medium";
+    table-layout: fixed;
+    border: 1px solid rgba(0,0,0,0.8);
+    background-color: #fff;                             /* requirement */
+    position: relative;
+    margin: auto;
+    clear: both;
+}
+
+.ttthead {
+    background-color: rgba(0,0,0,0.9);
+    color: rgba(255,255,255,0.98);
+    font-size: 2em;
+    text-align: center;
+    padding: 150px;
+}
+
+.tttbody {
+    text-align: center;
+    background-color: rgba(255,255,255,0.6);
+    font-size: 1em;
+    border-color: rgba(0,0,0,0.8);                                  /* requirement */
+}
+.timetble td,th + td {
+    border-left: 1px solid rgba(0,0,0,0.8);
+}
+
+.tttbody .factor {
+    vertical-align: top;
+    padding-top: 0;
+}
+
+.tttbody td {
+    vertical-align: bottom;
+    background-color: #ffffff;
+    vertical-align: middle;
+}
+
+.tttbody .webapps{
+    background-color: rgba(255, 153, 204,0.8);
+}
+
+.tttbody .maths {
+    background-color: rgba(0, 204, 204,0.8);
+}
+
+.tttbody .networks {
+    background-color: rgba(255, 255, 204,0.8);
+}
+ 
+.tttbody .intro {
+    background-color: rgba(204, 204, 255,0.8);
+}
+
+#requir {
+    background-color: rgba(255,255,255,0.55);
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.7);
+    color: black;
+    font-size: 1.5em;
+    display: block;
+    padding: 1%;
+}
+
+.reh3 {
+    text-align: center;
+    font-family: "SIMPLIFICA";
+    font-size: 2.5em;
+    text-shadow: 0 0 1px rgba(0,0,0,0.6);
+    
+}
+#checklistre ul li a:link, #checklistre ul li a:visited {text-decoration: none; color: inherit;}
+#checklistre ul li a:hover {
+    color: rgba(255,255,255,0.9);
+    transition: ease 0.4s;
+}   
+#checklistre ul li:hover {
+    transition: ease 0.4s;
+    background-color: rgba(0,0,0,0.75);
+    color: rgba(255,255,255,0.9);
+                                                            /*https://www.w3schools.com/css/css3_transitions.asp*/
+}
+
+:target {
+    border: 5px solid red;
+    z-index: 2000;
+}
+
+target::after {
+    border: none;
+}
+
+#requirement3 * {
+     border: 1px solid black ;
+}
+
+.reflectionp p{
+    text-align: center;
+    font-size: 1.5em;
+    border: 1px solid black;
+    padding: 1%;
+}
+
+.enhancements {
+   padding-left: 3%;
+}
+
+.enhancements ul li {
+    font-size: 2em;
+    text-decoration: none;
+    display: block;
+    color: #616161;
+    text-align: left;
+}
+
+.enhancements ul li a:link, a:visited {
+    color: #616161;
+    text-decoration: none;
+}
